@@ -49,48 +49,61 @@
       </ul>
     </div>
   </nav>
-<div class="main">
-  <div class="row">
-  <div class="col-md">        
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title">Contrataciones</h4>
-        <table border=1>
-          <tr>
-            <td>RUT</td>
-            <td>Nombre</td>
-            <td>Apellido</td>
-            <td>Region</td>
-            <td>Comuna</td>
-            <td>Correo Electrónico</td>
-            <td>Contratación</td>
-            <td>Comentario</td>
-          </tr>
-          {% for sol in solicitudes %}
-          <tr>
-            <td>{{sol.rut}}</td>
-            <td>{{sol.nombre}}</td>
-            <td>{{sol.apellido}}</td>
-            <td>{{sol.region}}</td>
-            <td>{{sol.comuna}}</td>
-            <td>{{sol.correo}}</td>
-            <td>{{sol.contratacion}}</td>
-            <td>{{sol.comentario}}</td>
-            <td><a href="{% url 'form_mod_solicitud' sol.rut%}" class="btn btn-primary">Modificar  </a></td>
-            <td><a href="{% url 'form_del_solicitud' sol.rut%}" class="btn btn-danger">Eliminar </a></td>  
-          </tr>
-          {% endfor %}
-        </table> 
-      </div>
-      <div class="row">
-        <div class="col-md">        
-          <div class="card">
-            <div class="card-body">   
-              <img class="card-img-bottom" src="{% static 'img/quienessomos2.jpg' %}"> 
-            </div>                  
-    </div> 
-  </div>             
-</div>
+
+<!--INICIO CARTA-->
+
+        <div class="main">
+          <div class="container">   
+            <div class="row">       
+              <div class="col-md">        
+                  <div class="card">           
+                    <div class="card-body">
+                      <h4 class="card-title">Contrataciones</h4>
+                      <table border=1>
+                        <tr>
+                          <td>RUT</td>
+                          <td>Nombre</td>
+                          <td>Apellido</td>
+                          <td>Region</td>
+                          <td>Comuna</td>
+                          <td>Correo Electrónico</td>
+                          <td>Contratación</td>
+                          <td>Comentario</td>
+                        </tr>
+                        {% for sol in solicitudes %}
+                        <tr>
+                          <td>{{sol.rut}}</td>
+                          <td>{{sol.nombre}}</td>
+                          <td>{{sol.apellido}}</td>
+                          <td>{{sol.region}}</td>
+                          <td>{{sol.comuna}}</td>
+                          <td>{{sol.correo}}</td>
+                          <td>{{sol.contratacion}}</td>
+                          <td>{{sol.comentario}}</td>
+                          <td><a href="{% url 'form_mod_solicitud' sol.rut%}" class="btn btn-primary">Modificar  </a></td>
+                          <td><a href="{% url 'form_del_solicitud' sol.rut%}" class="btn btn-danger">Eliminar </a></td>  
+                        </tr>
+                        {% endfor %}
+                      </table> 
+                    </div>
+                  </div>          
+              </div>
+        
+              <div class="col-md">        
+                  <div class="card">
+                    <div class="card-body">
+                    <img class="card-img-bottom" src="{% static 'img/galeria/dba.png' %}">
+                    <img class="card-img-bottom" src="{% static 'img/galeria/monitoreo.png' %}">
+                    <img class="card-img-bottom" src="{% static 'img/galeria/soporte.png' %}">
+                    <img class="card-img-bottom" src="{% static 'img/quienesomos.jpg' %}">
+                    <img class="card-img-bottom" src="{% static 'img/quienessomos2.jpg' %}">  
+                    </div>                      
+                  </div>          
+              </div>
+          </div>
+        </div>
+        </div>
+<!--FINAL CARTA-->
 <!-- footer -->
 <footer class="bg-dark text-center text-white">
   <div class="container">
